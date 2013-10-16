@@ -86,7 +86,8 @@ LCA(u, v) "Least Common Ancestor":
   * Do Euler tour
   * TODO
 
-"""
+Deletion van emde boas
+```
 function Delete(T, x)
     if T.min == T.max == x then
         T.min = M
@@ -112,4 +113,4 @@ function Delete(T, x)
     if T.children[i] is empty then
         Delete(T.aux, i)
 end
-"""
+```
