@@ -5,11 +5,11 @@ Master Theorem
   * n/b is the size of each subproblem (assumed to be the same size)
   * f(n) is the cost of the work done for the current problem (outside recrusive calls)
   * there are three cases to account for:
-    * Case 1:  f(n) = theta(n^c). where c < log<sub>b</sub>(a)
-        T(n) = theta(n^(log_b(a)))
-    * Case 2:  f(n) = theta(n^c log^(k)(n))
-        T(n) = theta(n^c log^(k+1)(n))
-    * Case 3:  f(n) = theta(n^c) where c > log<sub>b</sub>(a)
+    * Case 1:  f(n) = theta(n<sup>c</sup>). where c < log<sub>b</sub>(a)
+        T(n) = theta(n<sup>log_b(a)</sup>)
+    * Case 2:  f(n) = theta(n<sup>c</sup> log<sup>k</sup>(n))
+        T(n) = theta(n<sup>c</sup> log<sup>k+1</sup>(n))
+    * Case 3:  f(n) = theta(n<sup>c</sup>) where c > log<sub>b</sub>(a)
         T(n) = theta(f(n))
 
 Amortized Analysis:
@@ -85,3 +85,31 @@ LCA(u, v) "Least Common Ancestor":
   * Return the least common ancestor of nodes u and v in tree T.
   * Do Euler tour
   * TODO
+
+"""
+function Delete(T, x)
+    if T.min == T.max == x then
+        T.min = M
+        T.max = -1
+        return
+    if x == T.min then
+        if T.aux is empty then
+            T.min = T.max
+            return
+        else
+            x = T.children[T.aux.min].min
+            T.min = x
+    if x == T.max then
+        if T.aux is empty then
+            T.max = T.min
+            return
+        else
+            T.max = T.children[T.aux.max].max
+    if T.aux is empty then
+        return
+    i = floor(x / )
+    Delete(T.children[i], x % )
+    if T.children[i] is empty then
+        Delete(T.aux, i)
+end
+"""
