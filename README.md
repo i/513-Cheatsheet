@@ -125,4 +125,4 @@ Useful?:
   * a = bc  <->  logb(a) = c ;; a = blogb(a) ;; logc(ab) = logc(a) + logc(b) ;; logb(a) = logc(a)/logc(b)
   * logb(1/a) = -logb(a) ;; logb(a) = 1/loga(b) ;; alogb(c) = clogb(a) ;;
   * sum(i=1 to k) { i(i+1) } = 1/3 (k+1)(k+2) ;; sum(i=1 to k) { i } = 1/2 k(k+1)) ;;
-  * sum(i=0 to k) { i * 2<sup>i</sup> = (k - 1) * 2<sup>k + 1</sup> + 2
+  * sum(i=0 to k) { i * 2<sup>i</sup>} = (k - 1) * 2<sup>k + 1</sup> + 2
