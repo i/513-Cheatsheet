@@ -77,9 +77,11 @@ Radix sort:
   * Works if sorting n k-digit numbers in base b
   * Running time: O(k(n + b))
 
-Euler tour:
+Euler tour:<br>
+  * Go to every node 
   <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Stirling_permutation_Euler_tour.svg/240px-Stirling_permutation_Euler_tour.svg.png">
 
 LCA(u, v) "Least Common Ancestor":
   * Return the least common ancestor of nodes u and v in tree T.
   * Do Euler tour
+  * TODO
