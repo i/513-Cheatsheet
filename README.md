@@ -5,15 +5,15 @@ Master Theorem
   * n/b is the size of each subproblem (assumed to be the same size)
   * f(n) is the cost of the work done for the current problem (outside recrusive calls)
   * there are three cases to account for:
-    * Case 1:  f(n) = theta(n^c). where c < log_b(a)
+    * Case 1:  f(n) = theta(n^c). where c < log<sub>b</sub>(a)
         T(n) = theta(n^(log_b(a)))
     * Case 2:  f(n) = theta(n^c log^(k)(n))
         T(n) = theta(n^c log^(k+1)(n))
-    * Case 3:  f(n) = theta(n^c) where c > log_b(a)
+    * Case 3:  f(n) = theta(n^c) where c > log<sub>b</sub>(a)
         T(n) = theta(f(n))
 
 Amortized Analysis:
-  * given a sequence of operations (x_1, ..., x_n), the amortized cost of the
+  * given a sequence of operations (x<sub>1</sub>, ..., x<sub>n</sub>), the amortized cost of the
     operations is the average
     the amortized cost of an algorithm is the maximum worst case
 
@@ -30,11 +30,11 @@ Treap (tree + heap):
   * Probalistic data structure
   * Average: Space O(n), Search O(log n), ins, del same
   * Worst: Space O(n), Search amortized O(log n), ins, del, same
-  * Every node has <k,h> pair k=tree order for k, random heap value for h
+  * Every node has < k, h > pair k=tree order for k, random heap value for h
   * Maintains tree order and heap order.
-  * Insert(<k,h>) into treap
+  * Insert(< k, h >) into treap
   * If there are no repeated values, the treap is unique
-  * Expected depth of n-node treap is D(n) <= c*log n
+  * Expected depth of n-node treap is D(n) <= c * log n.
 
 Comparison Sorts:
   * Examples
@@ -65,3 +65,21 @@ Van Emde Boas tree:
   * Search O(log log n)
   * Insert O(log log n)
   * Delete O(log log n)
+
+Stable sorting - A sorting algorithm is stable if two entries of the same value do not change order
+
+Bin sort:
+  * sort n integers in range [m]
+  * O(n + m)
+
+
+Radix sort:
+  * Works if sorting n k-digit numbers in base b
+  * Running time: O(k(n + b))
+
+Euler tour:
+  <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Stirling_permutation_Euler_tour.svg/240px-Stirling_permutation_Euler_tour.svg.png">
+
+LCA(u, v) "Least Common Ancestor":
+  * Return the least common ancestor of nodes u and v in tree T.
+  * Do Euler tour
